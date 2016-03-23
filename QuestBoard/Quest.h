@@ -17,7 +17,7 @@
 @property (strong, nonatomic) NSString *qname;
 @property (strong, nonatomic) NSURL *qImageURL;
 @property (strong, nonatomic) NSString *questDescription;
-@property (strong, nonatomic) QuestGiver *giver;
+//@property (strong, nonatomic) QuestGiver *giver;
 //@property (strong, nonatomic) NSArray *qGiverList;
 
 @end

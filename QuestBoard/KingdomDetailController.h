@@ -15,6 +15,6 @@
 
 
 
-//-(void)setUpTopRegion:(KingdomDetail *)kingdomDetail;
+-(void)setUpTopRegion;
 
 @end

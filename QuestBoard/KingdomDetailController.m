@@ -17,12 +17,15 @@
 #import "KingdomClient.h"
 #import "KingdomDetail.h"
 #import "UIImageView+WebCache.h"
+#import "Quest.h"
 
 @interface KingdomDetailController (){
 
 @private KingdomDetail *kingdomDetail;
     
-@private __block KingdomDetail *kingdomDetailList;
+//@private __block KingdomDetail *kingdomDetailList;
+//@private __block NSArray *questList;
+@private Quest *questList;
     
 }
 // Top view UIs
@@ -54,9 +57,11 @@
     [KingdomDetailClient getKingdomDetailList:self.selectedKingdom.id withSuccess:^(id _Nullable result) {
         [SVProgressHUD dismiss];
         NSError *error = nil;
-        kingdomDetailList = [MTLJSONAdapter modelsOfClass:[KingdomDetail class] fromJSONArray:result error:&error];
-        NSLog(@"%@",kingdomDetailList);
+        kingdomDetail = [MTLJSONAdapter modelOfClass:[KingdomDetail class] fromJSONDictionary:result error:&error];
+        [self setUpTopRegion];
+        //NSLog(@"%@",kingdomDetail);
     }];
+    
     
 }
 
@@ -64,12 +69,12 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
 // Set up top view
-//-(void)setUpTopRegion:(KingdomDetail *)kingdomDetail{
-//    kingdomDetail.imageURL = [kingdomDetailList valueForKey:@"imageURL"];
-//    [self.kImageView sd_setImageWithURL:kingdomDetail.imageURL];
-//}
+-(void)setUpTopRegion {
+    self.climateLabel.text = kingdomDetail.name;
+    self.populationLabel.text = [kingdomDetail.population stringValue];
+    [self.kImageView sd_setImageWithURL:kingdomDetail.imageURL];
+}
 
 /*
 #pragma mark - Navigation

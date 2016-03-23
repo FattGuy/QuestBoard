@@ -19,7 +19,7 @@
 @property (strong, nonatomic) NSString *climate;
 @property (strong, nonatomic) NSNumber *population;
 //@property (strong, nonatomic) NSArray *questList;
-@property (strong, nonatomic) Quest *quests;
+//@property (strong, nonatomic) Quest *quests;
 //
 //@property (strong, nonatomic) NSNumber *qid;
 //@property (strong, nonatomic) NSString *qname;

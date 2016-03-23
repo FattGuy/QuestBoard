@@ -16,8 +16,8 @@
              @"name":@"name",
              @"imageURL":@"image",
              @"climate":@"climate",
-             @"population":@"population",
-             @"quests":@"quests"
+             @"population":@"population"
+//           @"questList":@"quests"
 //             @"qid":@"quests.id",
 //             @"qname":@"quests.name",
 //             @"qImageURL":@"quests.image",
@@ -33,24 +33,8 @@
     return [NSValueTransformer valueTransformerForName:MTLURLValueTransformerName];
 }
 
-+ (NSValueTransformer *)climateJSONTransformer {
-    return [NSValueTransformer valueTransformerForName:MTLURLValueTransformerName];
-}
-
-+ (NSValueTransformer *)populationJSONTransformer {
-    return [NSValueTransformer valueTransformerForName:MTLURLValueTransformerName];
-}
-
-//+ (NSValueTransformer *)qImageURLJSONTransformer {
-//    return [NSValueTransformer valueTransformerForName:MTLURLValueTransformerName];
-//}
-//
-+ (NSValueTransformer *)questDescriptionJSONTransformer {
-    return [MTLJSONAdapter arrayTransformerWithModelClass:Quest.class];
-}
-
 //+ (NSValueTransformer *)questsJSONTransformer {
-//    return [MTLJSONAdapter dictionaryTransformerWithModelClass:Quest.class];
+//    return [MTLJSONAdapter arrayTransformerWithModelClass:Quest.class];
 //}
 
 @end
