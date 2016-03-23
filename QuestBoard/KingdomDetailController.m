@@ -22,7 +22,7 @@
 
 @private KingdomDetail *kingdomDetail;
     
-@private __block NSArray *kingdomDetailList;
+@private __block KingdomDetail *kingdomDetailList;
     
 }
 // Top view UIs
