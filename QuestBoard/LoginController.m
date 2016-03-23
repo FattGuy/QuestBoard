@@ -22,6 +22,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    // Initial a User
     self.user = [[User alloc] init];
 }
 
@@ -34,7 +35,7 @@
     [self.nameTextField resignFirstResponder];
     [self.emailTextField resignFirstResponder];
 }
-
+// Submit the user information, check the signup history for next page
 - (IBAction)submitAction:(id)sender {
     self.user.name = self.nameTextField.text;
     self.user.email = self.emailTextField.text;

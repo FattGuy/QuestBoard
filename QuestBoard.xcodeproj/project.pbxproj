@@ -52,6 +52,10 @@
 		B300D3D21C9EF75B009D2CC2 /* UIImageView+HighlightedWebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = B300D3C01C9EF75B009D2CC2 /* UIImageView+HighlightedWebCache.m */; };
 		B300D3D31C9EF75B009D2CC2 /* UIImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = B300D3C21C9EF75B009D2CC2 /* UIImageView+WebCache.m */; };
 		B300D3D41C9EF75B009D2CC2 /* UIView+WebCacheOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = B300D3C41C9EF75B009D2CC2 /* UIView+WebCacheOperation.m */; };
+		B323420E1C9FA5CC005E221F /* KingdomDetailClient.m in Sources */ = {isa = PBXBuildFile; fileRef = B323420D1C9FA5CC005E221F /* KingdomDetailClient.m */; };
+		B380306D1CA0C7DB002DB888 /* Quest.m in Sources */ = {isa = PBXBuildFile; fileRef = B380306C1CA0C7DB002DB888 /* Quest.m */; };
+		B38030701CA0C7EE002DB888 /* QuestGiver.m in Sources */ = {isa = PBXBuildFile; fileRef = B380306F1CA0C7EE002DB888 /* QuestGiver.m */; };
+		B38030731CA0D7CF002DB888 /* KingdomDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = B38030721CA0D7CF002DB888 /* KingdomDetail.m */; };
 		B38CF3A81C9F2786009D055F /* LoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = B38CF3A71C9F2786009D055F /* LoginController.m */; };
 		B38CF3AE1C9F2800009D055F /* KingdomsController.m in Sources */ = {isa = PBXBuildFile; fileRef = B38CF3AD1C9F2800009D055F /* KingdomsController.m */; };
 		B38CF3B41C9F291A009D055F /* KingdomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B38CF3B31C9F291A009D055F /* KingdomCell.m */; };
@@ -167,6 +171,14 @@
 		B300D3C21C9EF75B009D2CC2 /* UIImageView+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+WebCache.m"; sourceTree = "<group>"; };
 		B300D3C31C9EF75B009D2CC2 /* UIView+WebCacheOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+WebCacheOperation.h"; sourceTree = "<group>"; };
 		B300D3C41C9EF75B009D2CC2 /* UIView+WebCacheOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+WebCacheOperation.m"; sourceTree = "<group>"; };
+		B323420C1C9FA5CC005E221F /* KingdomDetailClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KingdomDetailClient.h; sourceTree = "<group>"; };
+		B323420D1C9FA5CC005E221F /* KingdomDetailClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KingdomDetailClient.m; sourceTree = "<group>"; };
+		B380306B1CA0C7DB002DB888 /* Quest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Quest.h; sourceTree = "<group>"; };
+		B380306C1CA0C7DB002DB888 /* Quest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Quest.m; sourceTree = "<group>"; };
+		B380306E1CA0C7EE002DB888 /* QuestGiver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestGiver.h; sourceTree = "<group>"; };
+		B380306F1CA0C7EE002DB888 /* QuestGiver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestGiver.m; sourceTree = "<group>"; };
+		B38030711CA0D7CF002DB888 /* KingdomDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KingdomDetail.h; sourceTree = "<group>"; };
+		B38030721CA0D7CF002DB888 /* KingdomDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KingdomDetail.m; sourceTree = "<group>"; };
 		B38CF3A61C9F2786009D055F /* LoginController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginController.h; sourceTree = "<group>"; };
 		B38CF3A71C9F2786009D055F /* LoginController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginController.m; sourceTree = "<group>"; };
 		B38CF3AC1C9F2800009D055F /* KingdomsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KingdomsController.h; sourceTree = "<group>"; };
@@ -407,6 +419,12 @@
 				B3E8926D1C9DF37900E15CBB /* User.m */,
 				B3E8926F1C9DF39900E15CBB /* Kingdom.h */,
 				B3E892701C9DF39900E15CBB /* Kingdom.m */,
+				B38030711CA0D7CF002DB888 /* KingdomDetail.h */,
+				B38030721CA0D7CF002DB888 /* KingdomDetail.m */,
+				B380306B1CA0C7DB002DB888 /* Quest.h */,
+				B380306C1CA0C7DB002DB888 /* Quest.m */,
+				B380306E1CA0C7EE002DB888 /* QuestGiver.h */,
+				B380306F1CA0C7EE002DB888 /* QuestGiver.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -453,6 +471,8 @@
 				B3E892771C9DF3ED00E15CBB /* SignUpClient.m */,
 				B3E892791C9DF3FC00E15CBB /* KingdomClient.h */,
 				B3E8927A1C9DF3FC00E15CBB /* KingdomClient.m */,
+				B323420C1C9FA5CC005E221F /* KingdomDetailClient.h */,
+				B323420D1C9FA5CC005E221F /* KingdomDetailClient.m */,
 			);
 			name = Client;
 			sourceTree = "<group>";
@@ -604,6 +624,7 @@
 				B300D3A21C9EF71E009D2CC2 /* SVProgressHUD.m in Sources */,
 				B300D3A01C9EF71E009D2CC2 /* SVIndefiniteAnimatedView.m in Sources */,
 				B300D3CB1C9EF75B009D2CC2 /* SDWebImageDownloaderOperation.m in Sources */,
+				B38030701CA0C7EE002DB888 /* QuestGiver.m in Sources */,
 				B300D3851C9EF38A009D2CC2 /* MTLTransformerErrorHandling.m in Sources */,
 				B3E892621C9DF2EC00E15CBB /* UIColor+Hex.m in Sources */,
 				B38CF3B71C9F2CC7009D055F /* KingdomDetailController.m in Sources */,
@@ -613,6 +634,7 @@
 				B300D3CF1C9EF75B009D2CC2 /* UIImage+GIF.m in Sources */,
 				B300D3D21C9EF75B009D2CC2 /* UIImageView+HighlightedWebCache.m in Sources */,
 				B300D3811C9EF38A009D2CC2 /* MTLJSONAdapter.m in Sources */,
+				B38030731CA0D7CF002DB888 /* KingdomDetail.m in Sources */,
 				B300D3D01C9EF75B009D2CC2 /* UIImage+MultiFormat.m in Sources */,
 				B3E892781C9DF3ED00E15CBB /* SignUpClient.m in Sources */,
 				B38CF3A81C9F2786009D055F /* LoginController.m in Sources */,
@@ -620,11 +642,13 @@
 				B300D38D1C9EF38A009D2CC2 /* NSValueTransformer+MTLInversionAdditions.m in Sources */,
 				B38CF3AE1C9F2800009D055F /* KingdomsController.m in Sources */,
 				B300D3CC1C9EF75B009D2CC2 /* SDWebImageManager.m in Sources */,
+				B380306D1CA0C7DB002DB888 /* Quest.m in Sources */,
 				B300D3C91C9EF75B009D2CC2 /* SDWebImageDecoder.m in Sources */,
 				B300D3561C9EF21F009D2CC2 /* AFSecurityPolicy.m in Sources */,
 				B300D35A1C9EF21F009D2CC2 /* AFURLSessionManager.m in Sources */,
 				B300D3571C9EF21F009D2CC2 /* AFURLConnectionOperation.m in Sources */,
 				B300D3551C9EF21F009D2CC2 /* AFNetworkReachabilityManager.m in Sources */,
+				B323420E1C9FA5CC005E221F /* KingdomDetailClient.m in Sources */,
 				B300D3961C9EF3AE009D2CC2 /* EXTRuntimeExtensions.m in Sources */,
 				B300D3CA1C9EF75B009D2CC2 /* SDWebImageDownloader.m in Sources */,
 				B300D3D41C9EF75B009D2CC2 /* UIView+WebCacheOperation.m in Sources */,

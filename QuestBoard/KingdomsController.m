@@ -18,6 +18,7 @@
 #import "UIColor+Hex.h"
 #import "Constant.h"
 #import "CommonUtil.h"
+#import "KingdomDetailController.h"
 
 @interface KingdomsController ()
 {
@@ -40,17 +41,18 @@
     
     user = [[User alloc] init];
     user.email = [UserDefaultsUtil getEmail];
-    
     self.navigationItem.title = user.email;
+    
+    selectedKingdom = [[Kingdom alloc] init];
     
     [SVProgressHUD setDefaultMaskType:SVProgressHUDMaskTypeBlack];
     [SVProgressHUD showWithStatus:@"Loading"];
-    
+    // Load basic information for Kingdom in tableview
     [KingdomClient getKingdomList:^(id _Nullable result) {
         [SVProgressHUD dismiss];
         NSError *error = nil;
         kingdomList = [MTLJSONAdapter modelsOfClass:[Kingdom class] fromJSONArray:result error:&error];
-        
+   
         [self.tableView reloadData];
         
     }];
@@ -80,16 +82,18 @@
     
     [cell setCellValue:kingdomList[indexPath.row]];
     // Configure the cell...
-    
     return cell;
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [tableView deselectRowAtIndexPath:indexPath animated:true];
-    
+    // Sign the basic infromation as values for each selected Kingdom
+    selectedKingdom.name = [kingdomList[indexPath.row] valueForKey:@"name"];
+    selectedKingdom.id = [kingdomList[indexPath.row] valueForKey:@"id"];
+    selectedKingdom.imageURL = [kingdomList[indexPath.row] valueForKey:@"imageURL"];
     [self performSegueWithIdentifier:@"KingdomDetailSegue" sender:nil];
 }
-
+// Logout action
 - (IBAction)logOutAction:(id)sender {
     [UserDefaultsUtil saveEmail:@""];
     
@@ -104,10 +108,20 @@
  #pragma mark - Navigation
  
  // In a storyboard-based application, you will often want to do a little preparation before navigation
+
+ // Pass the values of basic information of a selected Kingdom
  - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
  // Get the new view controller using [segue destinationViewController].
  // Pass the selected object to the new view controller.
-     
+
+     if ([segue.identifier isEqualToString:@"KingdomDetailSegue"]) {
+         KingdomDetailController *kdc = segue.destinationViewController;
+         kdc.navigationItem.title = selectedKingdom.name;
+         [kdc setValue:selectedKingdom forKey:@"selectedKingdom"];
+         
+     } else {
+         [SVProgressHUD showErrorWithStatus:@"Kingdom not found"];
+     }
  }
 
 

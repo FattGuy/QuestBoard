@@ -5,6 +5,7 @@
 //  Created by Feng Chang on 3/19/16.
 //  Copyright © 2016 FattGuy. All rights reserved.
 //
+// User model
 
 #import <Foundation/Foundation.h>
 

@@ -10,6 +10,7 @@
 #import "User.h"
 
 @interface LoginController : UIViewController
+// Login page UIs
 @property (weak, nonatomic) IBOutlet UITextField *nameTextField;
 @property (weak, nonatomic) IBOutlet UITextField *emailTextField;
 

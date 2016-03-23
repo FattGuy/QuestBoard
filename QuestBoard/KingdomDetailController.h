@@ -7,7 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Kingdom.h"
 
 @interface KingdomDetailController : UIViewController
+
+@property (strong, nonatomic) Kingdom *selectedKingdom;
+
+
+
+//-(void)setUpTopRegion:(KingdomDetail *)kingdomDetail;
 
 @end

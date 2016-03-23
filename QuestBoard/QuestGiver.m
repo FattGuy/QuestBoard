@@ -1,20 +1,20 @@
 //
-//  Kingdom.m
+//  QuestGiver.m
 //  QuestBoard
 //
-//  Created by Feng Chang on 3/19/16.
+//  Created by Feng Chang on 3/21/16.
 //  Copyright © 2016 FattGuy. All rights reserved.
 //
 
-#import "Kingdom.h"
+#import "QuestGiver.h"
 
-@implementation Kingdom
+@implementation QuestGiver
 
 +(NSDictionary *)JSONKeyPathsByPropertyKey{
     return @{
-             @"id":@"id",
-             @"name":@"name",
-             @"imageURL":@"image"
+             @"gid":@"id",
+             @"gname":@"name",
+             @"gImageURL":@"image"
              };
 }
 

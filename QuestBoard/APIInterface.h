@@ -6,7 +6,7 @@
 //  Copyright © 2016 FattGuy. All rights reserved.
 //
 
-//API Interface
+//API Interface for GET & POST
 
 #define HOST @"https://challenge2015.myriadapps.com/api/v1/"
 
