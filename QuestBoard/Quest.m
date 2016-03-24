@@ -13,19 +13,20 @@
 
 +(NSDictionary *)JSONKeyPathsByPropertyKey{
     return @{
-             @"qid":@"quests.id",
-             @"qname":@"quests.name",
-             @"qImageURL":@"quests.image",
-             @"questDescription":@"quests.description"
+             @"qid":@"id",
+             @"qname":@"name",
+             @"qImageURL":@"image",
+             @"questDescription":@"description",
+             @"giver":@"giver"
              };
 }
 
-+ (NSValueTransformer *)imageURLJSONTransformer {
++ (NSValueTransformer *)qImageURLJSONTransformer {
     return [NSValueTransformer valueTransformerForName:MTLURLValueTransformerName];
 }
 
-//+ (NSValueTransformer *)giverJSONTransformer {
-//    return [MTLJSONAdapter dictionaryTransformerWithModelClass: QuestGiver.class];
-//}
++ (NSValueTransformer *)giverJSONTransformer {
+    return [MTLJSONAdapter dictionaryTransformerWithModelClass:QuestGiver.class];
+}
 
 @end

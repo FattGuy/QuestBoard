@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "KingdomDetailController.h"
 
 @interface KingdomsController : UITableViewController
 

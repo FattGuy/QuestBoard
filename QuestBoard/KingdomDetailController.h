@@ -8,12 +8,15 @@
 
 #import <UIKit/UIKit.h>
 #import "Kingdom.h"
+#import "KingdomDetailController.h"
+#import "QuestView.h"
 
 @interface KingdomDetailController : UIViewController
 
 @property (strong, nonatomic) Kingdom *selectedKingdom;
 
 
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 
 -(void)setUpTopRegion;
 

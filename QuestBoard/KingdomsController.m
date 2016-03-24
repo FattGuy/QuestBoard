@@ -18,7 +18,7 @@
 #import "UIColor+Hex.h"
 #import "Constant.h"
 #import "CommonUtil.h"
-#import "KingdomDetailController.h"
+
 
 @interface KingdomsController ()
 {
@@ -35,27 +35,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    UIImage *bgImage = [CommonUtil imageWithColor:[UIColor colorWithHex:OutstandingBlue]];
-    
-    [self.navigationController.navigationBar setBackgroundImage:bgImage forBarMetrics:UIBarMetricsDefault];
-    
     user = [[User alloc] init];
     user.email = [UserDefaultsUtil getEmail];
     self.navigationItem.title = user.email;
-    
     selectedKingdom = [[Kingdom alloc] init];
     
-    [SVProgressHUD setDefaultMaskType:SVProgressHUDMaskTypeBlack];
-    [SVProgressHUD showWithStatus:@"Loading"];
-    // Load basic information for Kingdom in tableview
-    [KingdomClient getKingdomList:^(id _Nullable result) {
-        [SVProgressHUD dismiss];
-        NSError *error = nil;
-        kingdomList = [MTLJSONAdapter modelsOfClass:[Kingdom class] fromJSONArray:result error:&error];
-   
-        [self.tableView reloadData];
-        
-    }];
+    [self loadData];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -64,7 +49,17 @@
 }
 
 - (void)loadData{
-    
+    [SVProgressHUD setDefaultMaskType:SVProgressHUDMaskTypeBlack];
+    [SVProgressHUD showWithStatus:@"Loading"];
+    // Load basic information for Kingdom in tableview
+    [KingdomClient getKingdomList:^(id _Nullable result) {
+        [SVProgressHUD dismiss];
+        NSError *error = nil;
+        kingdomList = [MTLJSONAdapter modelsOfClass:[Kingdom class] fromJSONArray:result error:&error];
+        
+        [self.tableView reloadData];
+        
+    }];
 }
 
 #pragma mark - Table view data source

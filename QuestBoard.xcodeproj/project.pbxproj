@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3C21E8911CA3B66600612DCE /* QuestView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C21E8901CA3B66600612DCE /* QuestView.xib */; };
+		3C21E8941CA3BD0700612DCE /* BaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C21E8931CA3BD0700612DCE /* BaseNavigationController.m */; };
 		B300D3521C9EF21F009D2CC2 /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = B300D3401C9EF21F009D2CC2 /* AFHTTPRequestOperation.m */; };
 		B300D3531C9EF21F009D2CC2 /* AFHTTPRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B300D3421C9EF21F009D2CC2 /* AFHTTPRequestOperationManager.m */; };
 		B300D3541C9EF21F009D2CC2 /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B300D3441C9EF21F009D2CC2 /* AFHTTPSessionManager.m */; };
@@ -56,6 +58,7 @@
 		B380306D1CA0C7DB002DB888 /* Quest.m in Sources */ = {isa = PBXBuildFile; fileRef = B380306C1CA0C7DB002DB888 /* Quest.m */; };
 		B38030701CA0C7EE002DB888 /* QuestGiver.m in Sources */ = {isa = PBXBuildFile; fileRef = B380306F1CA0C7EE002DB888 /* QuestGiver.m */; };
 		B38030731CA0D7CF002DB888 /* KingdomDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = B38030721CA0D7CF002DB888 /* KingdomDetail.m */; };
+		B385BA921CA389F500AB88C3 /* QuestView.m in Sources */ = {isa = PBXBuildFile; fileRef = B385BA911CA389F500AB88C3 /* QuestView.m */; };
 		B38CF3A81C9F2786009D055F /* LoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = B38CF3A71C9F2786009D055F /* LoginController.m */; };
 		B38CF3AE1C9F2800009D055F /* KingdomsController.m in Sources */ = {isa = PBXBuildFile; fileRef = B38CF3AD1C9F2800009D055F /* KingdomsController.m */; };
 		B38CF3B41C9F291A009D055F /* KingdomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B38CF3B31C9F291A009D055F /* KingdomCell.m */; };
@@ -76,6 +79,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3C21E8901CA3B66600612DCE /* QuestView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QuestView.xib; sourceTree = "<group>"; };
+		3C21E8921CA3BD0700612DCE /* BaseNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseNavigationController.h; sourceTree = "<group>"; };
+		3C21E8931CA3BD0700612DCE /* BaseNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseNavigationController.m; sourceTree = "<group>"; };
 		B300D33F1C9EF21F009D2CC2 /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
 		B300D3401C9EF21F009D2CC2 /* AFHTTPRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPRequestOperation.m; sourceTree = "<group>"; };
 		B300D3411C9EF21F009D2CC2 /* AFHTTPRequestOperationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperationManager.h; sourceTree = "<group>"; };
@@ -179,6 +185,8 @@
 		B380306F1CA0C7EE002DB888 /* QuestGiver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestGiver.m; sourceTree = "<group>"; };
 		B38030711CA0D7CF002DB888 /* KingdomDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KingdomDetail.h; sourceTree = "<group>"; };
 		B38030721CA0D7CF002DB888 /* KingdomDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KingdomDetail.m; sourceTree = "<group>"; };
+		B385BA901CA389F500AB88C3 /* QuestView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestView.h; sourceTree = "<group>"; };
+		B385BA911CA389F500AB88C3 /* QuestView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestView.m; sourceTree = "<group>"; };
 		B38CF3A61C9F2786009D055F /* LoginController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginController.h; sourceTree = "<group>"; };
 		B38CF3A71C9F2786009D055F /* LoginController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginController.m; sourceTree = "<group>"; };
 		B38CF3AC1C9F2800009D055F /* KingdomsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KingdomsController.h; sourceTree = "<group>"; };
@@ -227,6 +235,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3C21E8951CA3BD0B00612DCE /* BaseController */ = {
+			isa = PBXGroup;
+			children = (
+				3C21E8921CA3BD0700612DCE /* BaseNavigationController.h */,
+				3C21E8931CA3BD0700612DCE /* BaseNavigationController.m */,
+			);
+			name = BaseController;
+			sourceTree = "<group>";
+		};
 		B300D3631C9EF376009D2CC2 /* Mantle */ = {
 			isa = PBXGroup;
 			children = (
@@ -358,6 +375,16 @@
 			name = SVProgressHUD;
 			sourceTree = "<group>";
 		};
+		B39E41831CA379DB00C3EF67 /* SwipeView */ = {
+			isa = PBXGroup;
+			children = (
+				B385BA901CA389F500AB88C3 /* QuestView.h */,
+				B385BA911CA389F500AB88C3 /* QuestView.m */,
+				3C21E8901CA3B66600612DCE /* QuestView.xib */,
+			);
+			name = SwipeView;
+			sourceTree = "<group>";
+		};
 		B3E8922E1C9DF16500E15CBB = {
 			isa = PBXGroup;
 			children = (
@@ -381,6 +408,7 @@
 				B3E892561C9DF1A100E15CBB /* Util */,
 				B3E892551C9DF17C00E15CBB /* Model */,
 				B3E892581C9DF1B000E15CBB /* Http */,
+				3C21E8951CA3BD0B00612DCE /* BaseController */,
 				B3E892571C9DF1A700E15CBB /* Controllers */,
 				B3E8923D1C9DF16500E15CBB /* AppDelegate.h */,
 				B3E8923E1C9DF16500E15CBB /* AppDelegate.m */,
@@ -499,9 +527,9 @@
 		B3E8925C1C9DF21D00E15CBB /* KingdomDetailController */ = {
 			isa = PBXGroup;
 			children = (
+				B39E41831CA379DB00C3EF67 /* SwipeView */,
 				B38CF3B51C9F2CC7009D055F /* KingdomDetailController.h */,
 				B38CF3B61C9F2CC7009D055F /* KingdomDetailController.m */,
-				B3E8925E1C9DF23C00E15CBB /* SwipeView */,
 			);
 			name = KingdomDetailController;
 			sourceTree = "<group>";
@@ -513,13 +541,6 @@
 				B38CF3B31C9F291A009D055F /* KingdomCell.m */,
 			);
 			name = Cell;
-			sourceTree = "<group>";
-		};
-		B3E8925E1C9DF23C00E15CBB /* SwipeView */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = SwipeView;
 			sourceTree = "<group>";
 		};
 		B3E8925F1C9DF2C100E15CBB /* Extension */ = {
@@ -591,6 +612,7 @@
 				B3E8924D1C9DF16500E15CBB /* LaunchScreen.storyboard in Resources */,
 				B3E8924A1C9DF16500E15CBB /* Assets.xcassets in Resources */,
 				B3E892481C9DF16500E15CBB /* Main.storyboard in Resources */,
+				3C21E8911CA3B66600612DCE /* QuestView.xib in Resources */,
 				B300D3A11C9EF71E009D2CC2 /* SVProgressHUD.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -638,6 +660,7 @@
 				B300D3D01C9EF75B009D2CC2 /* UIImage+MultiFormat.m in Sources */,
 				B3E892781C9DF3ED00E15CBB /* SignUpClient.m in Sources */,
 				B38CF3A81C9F2786009D055F /* LoginController.m in Sources */,
+				3C21E8941CA3BD0700612DCE /* BaseNavigationController.m in Sources */,
 				B300D3871C9EF38A009D2CC2 /* NSArray+MTLManipulationAdditions.m in Sources */,
 				B300D38D1C9EF38A009D2CC2 /* NSValueTransformer+MTLInversionAdditions.m in Sources */,
 				B38CF3AE1C9F2800009D055F /* KingdomsController.m in Sources */,
@@ -660,6 +683,7 @@
 				B3E892711C9DF39900E15CBB /* Kingdom.m in Sources */,
 				B300D3A31C9EF71E009D2CC2 /* SVRadialGradientLayer.m in Sources */,
 				B38CF3B41C9F291A009D055F /* KingdomCell.m in Sources */,
+				B385BA921CA389F500AB88C3 /* QuestView.m in Sources */,
 				B300D3541C9EF21F009D2CC2 /* AFHTTPSessionManager.m in Sources */,
 				B300D3591C9EF21F009D2CC2 /* AFURLResponseSerialization.m in Sources */,
 				B300D3831C9EF38A009D2CC2 /* MTLModel.m in Sources */,

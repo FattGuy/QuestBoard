@@ -7,7 +7,6 @@
 //
 
 #import "KingdomDetailController.h"
-#import "Kingdom.h"
 #import "CommonUtil.h"
 #import "UIColor+Hex.h"
 #import "Constant.h"
@@ -23,15 +22,13 @@
 
 @private KingdomDetail *kingdomDetail;
     
-//@private __block KingdomDetail *kingdomDetailList;
-//@private __block NSArray *questList;
-@private Quest *questList;
-    
 }
 // Top view UIs
 @property (weak, nonatomic) IBOutlet UIImageView *kImageView;
 @property (weak, nonatomic) IBOutlet UILabel *climateLabel;
 @property (weak, nonatomic) IBOutlet UILabel *populationLabel;
+// Bottom Scrollview
+@property (retain, nonatomic) IBOutlet UIScrollView *scrollQuestsView;
 
 @end
 
@@ -40,41 +37,49 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    UIImage *bgImage = [CommonUtil imageWithColor:[UIColor colorWithHex:OutstandingBlue]];
-    [self.navigationController.navigationBar setBackgroundImage:bgImage forBarMetrics:UIBarMetricsDefault];
-    // Name UIBarButtonItem
-    UIBarButtonItem *backBarButtonItem = [[UIBarButtonItem alloc]
-                                          initWithTitle:@"Back"
-                                          style:UIBarButtonItemStylePlain
-                                          target:self
-                                          action:nil];
-    self.navigationController.navigationBar.topItem.backBarButtonItem = backBarButtonItem;
+    
+    [self loadData];
+}
 
+-(void)loadData{
     [SVProgressHUD setDefaultMaskType:SVProgressHUDMaskTypeBlack];
     [SVProgressHUD showWithStatus:@"Loading"];
-
+    
     // Load detail infomation of Kingdom
     [KingdomDetailClient getKingdomDetailList:self.selectedKingdom.id withSuccess:^(id _Nullable result) {
         [SVProgressHUD dismiss];
         NSError *error = nil;
         kingdomDetail = [MTLJSONAdapter modelOfClass:[KingdomDetail class] fromJSONDictionary:result error:&error];
         [self setUpTopRegion];
-        //NSLog(@"%@",kingdomDetail);
+        [self buildQustView];
     }];
+}
+
+-(void)buildQustView{
     
+    self.scrollView.contentSize = CGSizeMake(kingdomDetail.quests.count *kWinSize.width, 0);
     
+    for (int i = 0 ; i < kingdomDetail.quests.count ; i++){
+        QuestView *questView = [[QuestView alloc] initWithFrame:CGRectMake(kWinSize.width*i, 0,kWinSize.width , 350)];
+        
+        [questView buildWithQuest:kingdomDetail.quests[i]];
+        
+        [self.scrollView addSubview:questView];
+    }
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
 // Set up top view
 -(void)setUpTopRegion {
-    self.climateLabel.text = kingdomDetail.name;
+    self.climateLabel.text = kingdomDetail.climate;
     self.populationLabel.text = [kingdomDetail.population stringValue];
     [self.kImageView sd_setImageWithURL:kingdomDetail.imageURL];
 }
+
 
 /*
 #pragma mark - Navigation
