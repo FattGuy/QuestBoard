@@ -27,8 +27,6 @@
 @property (weak, nonatomic) IBOutlet UIImageView *kImageView;
 @property (weak, nonatomic) IBOutlet UILabel *climateLabel;
 @property (weak, nonatomic) IBOutlet UILabel *populationLabel;
-// Bottom Scrollview
-@property (retain, nonatomic) IBOutlet UIScrollView *scrollQuestsView;
 
 @end
 
