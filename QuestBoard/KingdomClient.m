@@ -7,7 +7,6 @@
 //
 
 #import "KingdomClient.h"
-#import "CommonUtil.h"
 
 @implementation KingdomClient
 
